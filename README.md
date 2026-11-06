@@ -2,6 +2,12 @@
 
 API REST desenvolvida com Spring Boot, Spring Data JPA e banco H2 em arquivo.
 
+## Alunos  
+Daniel Souza Crisostomo  
+Fernanda Vogado  
+Anderson Brandão  
+iasmin Ferreira  
+
 ## Requisitos
 
 - Java 21
