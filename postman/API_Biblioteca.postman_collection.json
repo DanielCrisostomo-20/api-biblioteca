@@ -1,0 +1,34 @@
+{
+  "info": {
+    "name": "API Biblioteca",
+    "description": "Testes dos endpoints da atividade API de Biblioteca",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Cadastrar livro",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\n  \"titulo\": \"Dom Casmurro\",\n  \"autor\": \"Machado de Assis\",\n  \"anoPublicacao\": 1899,\n  \"disponivel\": true\n}", "options": {"raw": {"language": "json"}}},
+        "url": {"raw": "http://localhost:8080/livros", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["livros"]}
+      }
+    },
+    {
+      "name": "Listar livros",
+      "request": {"method": "GET", "url": {"raw": "http://localhost:8080/livros", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["livros"]}}
+    },
+    {
+      "name": "Buscar livro por ID",
+      "request": {"method": "GET", "url": {"raw": "http://localhost:8080/livros/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["livros", "1"]}}
+    },
+    {
+      "name": "Buscar ID inexistente (404)",
+      "request": {"method": "GET", "url": {"raw": "http://localhost:8080/livros/9999", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["livros", "9999"]}}
+    },
+    {
+      "name": "Listar disponíveis (extra)",
+      "request": {"method": "GET", "url": {"raw": "http://localhost:8080/livros/disponiveis", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["livros", "disponiveis"]}}
+    }
+  ]
+}
